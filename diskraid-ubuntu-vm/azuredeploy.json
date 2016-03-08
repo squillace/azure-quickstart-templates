@@ -243,7 +243,7 @@
             {
               "name": "datadisk3",
               "diskSizeGB": "[parameters('dataDiskSize')]",
-              "lun": 1,
+              "lun": 2,
               "vhd": {
                 "Uri": "[concat('http://',parameters('storageAccountName'),'.blob.core.windows.net/vhds/','myvm' ,'dataDisk3','.vhd')]"
               },
@@ -253,7 +253,7 @@
             {
               "name": "datadisk4",
               "diskSizeGB": "[parameters('dataDiskSize')]",
-              "lun": 1,
+              "lun": 3,
               "vhd": {
                 "Uri": "[concat('http://',parameters('storageAccountName'),'.blob.core.windows.net/vhds/','myvm' ,'dataDisk4','.vhd')]"
               },
