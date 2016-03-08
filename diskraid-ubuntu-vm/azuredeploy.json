@@ -120,7 +120,7 @@
       "name": "[parameters('storageAccountName')]",
       "location": "[parameters('location')]",
       "properties": {
-        "accountType": "Standard_LRS"
+        "accountType": "Premium_LRS"
       }
     },
     {
@@ -239,8 +239,28 @@
               },
               "caching": "None",
               "createOption": "Empty"
+            },
+            {
+              "name": "datadisk3",
+              "diskSizeGB": "[parameters('dataDiskSize')]",
+              "lun": 1,
+              "vhd": {
+                "Uri": "[concat('http://',parameters('storageAccountName'),'.blob.core.windows.net/vhds/','myvm' ,'dataDisk3','.vhd')]"
+              },
+              "caching": "None",
+              "createOption": "Empty"
+            },
+            {
+              "name": "datadisk4",
+              "diskSizeGB": "[parameters('dataDiskSize')]",
+              "lun": 1,
+              "vhd": {
+                "Uri": "[concat('http://',parameters('storageAccountName'),'.blob.core.windows.net/vhds/','myvm' ,'dataDisk4','.vhd')]"
+              },
+              "caching": "None",
+              "createOption": "Empty"
             }
-          ]
+        ]
         },
         "networkProfile": {
           "networkInterfaces": [
